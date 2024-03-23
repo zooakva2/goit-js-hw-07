@@ -1,3 +1,4 @@
+/* Додаткові стилі для завдання 2 */
 .gallery {
   display: flex;
   list-style-type: none;
@@ -9,6 +10,15 @@
 }
 
 .gallery img {
-  max-width: 100%;
+  max-width: 100px;
   height: auto;
+}
+
+/* Додаткові стилі для завдання 5 */
+.widget {
+  margin-top: 20px;
+}
+
+.widget button {
+  margin-top: 10px;
 }

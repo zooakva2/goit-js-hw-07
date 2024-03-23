@@ -1,9 +1,16 @@
-const galleryList = document.querySelector(".gallery");
+const gallery = document.querySelector(".gallery");
 
-const imagesMarkup = images
-  .map((image) => {
-    return `<li><img src="${image.url}" alt="${image.alt}"></li>`;
-  })
-  .join("");
+const createGalleryItem = ({ url, alt }) => {
+  return `
+    <li>
+      <img src="${url}" alt="${alt}" />
+    </li>
+  `;
+};
 
-galleryList.insertAdjacentHTML("beforeend", imagesMarkup);
+const renderGallery = (images) => {
+  const galleryItems = images.map(createGalleryItem).join("");
+  gallery.innerHTML = galleryItems;
+};
+
+renderGallery(images);
